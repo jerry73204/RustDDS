@@ -31,7 +31,7 @@ use log::error;
   Serialize,
   Deserialize,
 )]
-pub struct SequenceNumber(i64);
+pub struct SequenceNumber(pub i64);
 
 impl SequenceNumber {
   pub const SEQUENCENUMBER_UNKNOWN: Self = Self((std::u32::MAX as i64) << 32);

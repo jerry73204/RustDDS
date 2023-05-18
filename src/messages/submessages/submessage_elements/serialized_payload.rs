@@ -9,7 +9,7 @@ use log::warn;
 /// Used to identify serialization format of payload data over RTPS.
 #[derive(Debug, PartialEq, Eq, Clone, Copy, Readable, Writable, Serialize, Deserialize)]
 pub struct RepresentationIdentifier {
-  bytes: [u8; 2],
+  pub bytes: [u8; 2],
 }
 
 impl RepresentationIdentifier {

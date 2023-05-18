@@ -4,7 +4,7 @@ use crate::messages::validity_trait::Validity;
 
 #[derive(Debug, Copy, Clone, PartialOrd, PartialEq, Ord, Eq)]
 pub struct ProtocolId {
-  protocol_id: [char; 4],
+  pub protocol_id: [char; 4],
 }
 
 impl ProtocolId {

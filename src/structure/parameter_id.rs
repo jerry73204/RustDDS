@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, PartialEq, Eq, Readable, Writable, Copy, Clone, Serialize, Deserialize)]
 pub struct ParameterId {
-  value: u16,
+  pub value: u16,
 }
 
 impl ParameterId {

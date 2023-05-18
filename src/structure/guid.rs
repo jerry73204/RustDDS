@@ -15,7 +15,7 @@ use crate::dds::traits::key::Key;
   Copy, Clone, PartialOrd, PartialEq, Ord, Eq, Hash, Serialize, Deserialize, CdrEncodingSize,
 )]
 pub struct GuidPrefix {
-  pub(crate) bytes: [u8; 12],
+  pub bytes: [u8; 12],
 }
 
 impl GuidPrefix {
@@ -102,7 +102,7 @@ impl<C: Context> Writable<C> for GuidPrefix {
 #[derive(
   Copy, Clone, PartialOrd, PartialEq, Ord, Eq, Hash, Serialize, Deserialize, CdrEncodingSize,
 )]
-pub struct EntityKind(u8);
+pub struct EntityKind(pub u8);
 
 impl EntityKind {
   // constants from RTPS spec Table 9.1
