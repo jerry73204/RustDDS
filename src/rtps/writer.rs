@@ -61,7 +61,7 @@ pub enum DeliveryMode {
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub(crate) enum TimedEvent {
+pub enum TimedEvent {
   Heartbeat,
   CacheCleaning,
   SendRepairData { to_reader: GUID },
@@ -70,7 +70,7 @@ pub(crate) enum TimedEvent {
 
 // This is used to construct an actual Writer.
 // Ingredients are sendable between threads, whereas the Writer is not.
-pub(crate) struct WriterIngredients {
+pub struct WriterIngredients {
   pub guid: GUID,
   pub writer_command_receiver: mio_channel::Receiver<WriterCommand>,
   pub writer_command_receiver_waker: Arc<Mutex<Option<Waker>>>,

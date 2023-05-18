@@ -40,7 +40,7 @@ use crate::{
 };
 
 #[derive(Clone, Debug)]
-pub(crate) enum ReaderCommand {
+pub enum ReaderCommand {
   #[allow(dead_code)] // TODO: Implement this (resetting) feature
   ResetRequestedDeadlineStatus,
 }
