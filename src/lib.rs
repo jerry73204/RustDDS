@@ -168,9 +168,9 @@ mod serialization_test;
 mod checked_impl;
 #[doc(hidden)]
 pub mod discovery; // to access some Discovered data in e.g. ros2-client crate
-mod messages;
+pub mod messages;
 mod network;
-mod rtps;
+pub mod rtps;
 
 #[cfg(feature = "security")]
 mod security;
@@ -180,7 +180,7 @@ pub use security::config::DomainParticipantSecurityConfigFiles;
 #[cfg(not(feature = "security"))]
 mod no_security;
 
-pub(crate) mod structure;
+pub mod structure;
 
 #[cfg(test)]
 mod test;

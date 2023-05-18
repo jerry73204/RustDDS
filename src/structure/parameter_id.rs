@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
   Debug, PartialEq, Eq, Ord, PartialOrd, Readable, Writable, Copy, Clone, Serialize, Deserialize,
 )]
 pub struct ParameterId {
-  value: u16,
+  pub value: u16,
 }
 
 impl ParameterId {

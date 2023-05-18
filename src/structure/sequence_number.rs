@@ -31,7 +31,7 @@ use log::error;
   Serialize,
   Deserialize,
 )]
-pub struct SequenceNumber(i64);
+pub struct SequenceNumber(pub i64);
 
 impl SequenceNumber {
   pub const SEQUENCENUMBER_UNKNOWN: Self = Self((std::u32::MAX as i64) << 32);
@@ -202,7 +202,7 @@ impl Default for SequenceNumber {
   FromPrimitive,
   ToPrimitive,
 )]
-pub struct FragmentNumber(u32);
+pub struct FragmentNumber(pub u32);
 
 impl FragmentNumber {
   pub const INVALID: Self = Self(0); // Valid FragmentNumbers start at 1.

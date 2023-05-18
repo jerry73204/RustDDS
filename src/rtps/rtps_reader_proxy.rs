@@ -22,7 +22,7 @@ use super::reader::ReaderIngredients;
 /// maintains on each matched RTPS Reader
 //
 // TODO: Maybe more of the members could be made private.
-pub(crate) struct RtpsReaderProxy {
+pub struct RtpsReaderProxy {
   /// Identifies the remote matched RTPS Reader that is represented by the
   /// ReaderProxy
   pub remote_reader_guid: GUID,

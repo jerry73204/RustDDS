@@ -5,7 +5,7 @@ pub(crate) mod cdr_serializer;
 pub mod error;
 pub mod representation_identifier;
 
-pub(crate) mod pl_cdr_adapters;
+pub mod pl_cdr_adapters;
 
 // public exports
 pub use cdr_serializer::{to_writer_endian, CDRSerializerAdapter, CdrSerializer};
