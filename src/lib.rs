@@ -173,7 +173,7 @@ mod serialization_test;
 #[macro_use]
 mod checked_impl;
 mod discovery;
-mod messages;
+pub mod messages;
 mod network;
 pub(crate) mod structure;
 
