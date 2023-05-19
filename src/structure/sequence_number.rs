@@ -180,7 +180,7 @@ impl Default for SequenceNumber {
   FromPrimitive,
   ToPrimitive,
 )]
-pub struct FragmentNumber(u32);
+pub struct FragmentNumber(pub u32);
 
 impl FragmentNumber {
   pub const INVALID: Self = Self(0); // Valid FragmentNumbers start at 1.
