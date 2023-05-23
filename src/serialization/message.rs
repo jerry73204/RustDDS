@@ -95,7 +95,13 @@ impl Message {
       //   submessages_left.split_at(sub_header_length + sub_content_length);
       // submessages_left = new_submessages_left;
       // split fisrt buters to new buffer
-      let mut sub_buffer = submessages_left.split_to(sub_header_length + sub_content_length);
+      let mut sub_buffer = {
+          let at = sub_header_length + sub_content_length;
+          if at > submessages_left.len() {
+              return Err(io::Error::new(io::ErrorKind::InvalidData, "invalid or truncated message"));
+          }
+          submessages_left.split_to(at)
+      };
       // split tail part (content) to new buffer
       let sub_content_buffer = sub_buffer.split_off(sub_header_length);
 
