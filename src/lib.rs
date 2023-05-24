@@ -172,7 +172,7 @@
 mod serialization_test;
 #[macro_use]
 mod checked_impl;
-mod discovery;
+pub mod discovery;
 pub mod messages;
 mod network;
 pub mod structure;
